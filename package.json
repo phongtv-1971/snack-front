@@ -16,6 +16,17 @@
     "typescript": "^4.1.2",
     "web-vitals": "^2.1.0"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --fix --max-warnings 0",
+      "prettier --parser typescript --write"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -27,18 +38,6 @@
     "prettier:fix:ts": "prettier 'src/**/*.{ts,tsx}' --parser typescript --write",
     "format": "yarn lint:fix && yarn prettier:fix:ts",
     "typecheck": "tsc --noEmit"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "**/*.{ts,tsx}": [
-      "eslint --fix --max-warnings 0",
-      "prettier --parser typescript --write",
-      "git add"
-    ]
   },
   "eslintConfig": {
     "extends": [
@@ -67,7 +66,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^7.0.1",
+    "husky": "4",
     "lint-staged": "^11.1.1",
     "prettier": "^2.3.2"
   }
