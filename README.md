@@ -1,1 +1,1 @@
-# snack-front
+# Snack-front
