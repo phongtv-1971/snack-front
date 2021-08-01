@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   root: true,
   parser: "@typescript-eslint/parser",
@@ -26,7 +27,6 @@ module.exports = {
       version: "detect",
     },
   },
-  ignorePatterns: ["**/generated/**"],
   rules: {
     "eqeqeq": ["error"],
     "no-case-declarations": ["off"],
